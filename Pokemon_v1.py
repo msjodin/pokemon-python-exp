@@ -62,7 +62,7 @@ class Pokemon:
     def whip(P1, P2):
         print(P1.name + " used whip")
         P2.hp -= (45 + P1.attack - P2.defense)
-        print(P2.name + ' was whipped... and he liked it')
+        print(P2.name + ' was whipped.')
         print(str(P2.name) + ' HP: ' + str(P2.hp))
         return P2.hp
 
@@ -90,7 +90,7 @@ class Pokemon:
     def bubble(P1, P2):
         print(P1.name + " used bubble")
         P2.hp -= (40 + P1.spattack - P2.spdefense)
-        print(P2.name + " is all wet ;P")
+        print(P2.name + " was bubbled")
         print(str(P2.name) + ' HP: ' + str(P2.hp))
         return P2.hp
 
@@ -104,7 +104,7 @@ class Pokemon:
     def headbutt(P1, P2):
         print(P1.name + " used headbutt")
         P2.hp -= (70 + P1.attack - P2.defense)
-        print(P2.name + ' said: That fucking hurt asshole!')
+        print(P2.name + ' said: That hurt!')
         print(str(P2.name) + ' HP: ' + str(P2.hp))
         return P2.hp
 
@@ -207,6 +207,9 @@ def Turn(P1, P2):
     if action == 'slaughter':
         y = ("P1.slaughter" + '(' + str("P2") + ')')
         eval(y)
+    else:
+        print('Please choose a valid move')
+        Turn(P1,P2)
 
 #function of two pokemon fighting
 
